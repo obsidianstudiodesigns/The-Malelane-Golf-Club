@@ -39,7 +39,7 @@ def page(slug, title, desc, body, robots="index, follow"):
 <link rel="apple-touch-icon" href="{pre}apple-touch-icon.png">
 <link rel="manifest" href="{pre}site.webmanifest">
 {f'<base href="/{REPO}/">' if nf else ''}
-<link rel="stylesheet" href="assets/css/style.css?v=2">
+<link rel="stylesheet" href="assets/css/style.css?v=3">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -195,7 +195,7 @@ def main():
     for path, pri, freq in urls:
         xml.append(f"  <url>\n    <loc>{BASE}{path}</loc>\n    <lastmod>{today}</lastmod>\n    <changefreq>{freq}</changefreq>\n    <priority>{pri}</priority>")
         if path == "":
-            for img in ("hero-wide-1536.webp", "og-share.jpg", "clubhouse-1280.webp", "camping-1280.webp"):
+            for img in ("hero-1920.webp", "og-share.jpg", "tree-stream-895.webp", "stream-1280.webp", "tee-cart-640.webp"):
                 xml.append(f"    <image:image><image:loc>{BASE}assets/img/{img}</image:loc></image:image>")
         xml.append("  </url>")
     xml.append("</urlset>")

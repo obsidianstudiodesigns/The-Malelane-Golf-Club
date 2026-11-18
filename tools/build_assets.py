@@ -21,15 +21,19 @@ GOLD = (207, 166, 78)
 
 # name: (source, crop as fractions l, t, r, b or None, widths)
 IMAGES = {
-    "hero-wide": ("gen/hero-wide.png", None, (960, 1536)),
-    "hero-tall": ("gen/hero-tall.png", None, (540, 864)),
-    "impala": ("gen/impala.png", None, (640, 1280)),
+    # the club's own photos (client/, from WhatsApp)
+    "hero": ("client/c3.jpg", None, (960, 1280, 1920)),
+    "tree-stream": ("client/c7.jpg", (.18, 0, .74, 1), (640, 895)),
+    "swing": ("client/c1.jpg", None, (640, 1280)),
+    "stream": ("client/c4.jpg", None, (640, 1280)),
+    "ball": ("client/c5.jpg", (.08, 0, .82, 1), (480, 947)),
+    "fairway-sky": ("client/c2.jpg", None, (960, 1280, 1920)),
+    "tee-cart": ("client/c6.jpg", (0, 0, .5, 1), (480, 640)),
+    "marker": ("fb/p3.jpg", (0, .06, 1, .94), (420, 591)),
+    # AI scene-setters until the club sends real ones
     "clubhouse": ("gen/clubhouse.png", None, (640, 1280)),
     "camping": ("gen/camping.png", None, (640, 1280)),
     "pool": ("gen/pool.png", None, (480, 960)),
-    "cartpath": ("gen/cartpath.png", None, (480, 960)),
-    "dusk": ("gen/dusk.png", None, (960, 1536)),
-    "marker": ("fb/p3.jpg", (0, .06, 1, .94), (420, 591)),
 }
 
 
@@ -45,10 +49,11 @@ def load(rel, crop=None):
 def save_sizes(name, im, widths):
     sizes = []
     for w in widths:
-        w = min(w, im.width)
         h = round(im.height * w / im.width)
-        im.resize((w, h), Image.LANCZOS).save(
-            os.path.join(OUT, f"{name}-{w}.webp"), "WEBP", quality=80, method=6)
+        out = im.resize((w, h), Image.LANCZOS)
+        if w > im.width:  # gentle upscale for big screens, with a light sharpen
+            out = out.filter(ImageFilter.UnsharpMask(radius=1.6, percent=55, threshold=3))
+        out.save(os.path.join(OUT, f"{name}-{w}.webp"), "WEBP", quality=82, method=6)
         sizes.append((w, h))
     return sizes
 
@@ -120,7 +125,7 @@ def favicons(logo):
 def og(logo):
     """WhatsApp / social preview: the golden-hour fairway, badge, name and line."""
     W, H = 1200, 630
-    photo = load("gen/hero-wide.png")
+    photo = load("client/c3.jpg")
     r = max(W / photo.width, H / photo.height)
     photo = photo.resize((round(photo.width * r), round(photo.height * r)), Image.LANCZOS)
     x = (photo.width - W) // 2

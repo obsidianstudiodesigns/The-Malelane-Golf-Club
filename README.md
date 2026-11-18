@@ -6,7 +6,7 @@ Live: https://obsidianstudiodesigns.github.io/The-Malelane-Golf-Club/
 
 - Static HTML, CSS and JavaScript with no build step, hosted on GitHub Pages from `main`.
 - Content comes from the club's Facebook page (contact details, the club badge, the "More than just a game" line, the new fairway markers post and the Newcomers Golf Day flyer) and public course write-ups (9 holes with 18 tees, par 72, the R570 splitting the course 3 and 6 holes, camping, pool, restaurant).
-- Photos: the 200 m marker photo is the club's own (Facebook). Every other scene is AI-generated (Figma, gpt-image) to set the mood. Swap in real photos of the course, clubhouse, pool and campsite when the club has them.
+- Photos: the hero, course, photo strip, banner and cart hire images are the club's own (sent on WhatsApp, 18 November 2026), and the 200 m marker photo is from their Facebook page. The clubhouse, pool and campsite tiles are still AI-generated (Figma, gpt-image) until the club sends real photos of those.
 - Look: dark bushveld green with the badge's gold, Bodoni Moda for display and Hanken Grotesk for text (both self-hosted, OFL), Phosphor icons (MIT). Feel taken from Leopard Creek and Kambaku, as the client asked. Dark only by design.
 - The booking form has no backend: it opens WhatsApp to 060 485 7945 with the message filled in.
 - The Newcomers Golf Day block switches itself off after 29 November 2026 and shows a "follow us on Facebook for golf days" note instead. Edit the `.event` block in `index.html` for the next event.
