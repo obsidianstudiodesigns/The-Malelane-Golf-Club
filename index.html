@@ -39,7 +39,7 @@
 <link rel="preload" href="assets/fonts/bodoni-moda.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="assets/img/hero-1920.webp" imagesrcset="assets/img/hero-960.webp 960w, assets/img/hero-1280.webp 1280w, assets/img/hero-1920.webp 1920w" imagesizes="(max-width: 700px) 220vw, 100vw">
-<link rel="stylesheet" href="assets/css/style.css?v=3">
+<link rel="stylesheet" href="assets/css/style.css?v=5">
 <script>document.documentElement.classList.replace('no-js','js')</script>
 
 <script type="application/ld+json">
@@ -47,7 +47,10 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["GolfCourse", "SportsActivityLocation"],
+      "@type": [
+        "GolfCourse",
+        "SportsActivityLocation"
+      ],
       "@id": "https://obsidianstudiodesigns.github.io/The-Malelane-Golf-Club/#club",
       "name": "The Malelane Golf Club",
       "alternateName": "Malelane Golf Club",
@@ -57,19 +60,65 @@
       "logo": "https://obsidianstudiodesigns.github.io/The-Malelane-Golf-Club/assets/img/badge-400.png",
       "telephone": "+27137900283",
       "email": "admin@malgc.co.za",
-      "address": {"@type": "PostalAddress", "streetAddress": "R570, Malelane Gate Road", "addressLocality": "Malelane", "addressRegion": "Mpumalanga", "postalCode": "1320", "addressCountry": "ZA"},
-      "areaServed": ["Malelane", "Nelspruit", "Mbombela", "Komatipoort", "Marloth Park", "Kruger National Park"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "R570, Malelane Gate Road",
+        "addressLocality": "Malelane",
+        "addressRegion": "Mpumalanga",
+        "postalCode": "1320",
+        "addressCountry": "ZA"
+      },
+      "areaServed": [
+        "Malelane",
+        "Nelspruit",
+        "Mbombela",
+        "Komatipoort",
+        "Marloth Park",
+        "Kruger National Park"
+      ],
       "amenityFeature": [
-        {"@type": "LocationFeatureSpecification", "name": "Campsite", "value": true},
-        {"@type": "LocationFeatureSpecification", "name": "Swimming pool", "value": true},
-        {"@type": "LocationFeatureSpecification", "name": "Clubhouse restaurant and bar", "value": true},
-        {"@type": "LocationFeatureSpecification", "name": "Golf cart hire", "value": true}
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Campsite",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Swimming pool",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Clubhouse restaurant and bar",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Golf cart hire",
+          "value": true
+        }
       ],
       "contactPoint": [
-        {"@type": "ContactPoint", "telephone": "+27137900283", "contactType": "reservations", "areaServed": "ZA", "availableLanguage": ["English", "Afrikaans"]},
-        {"@type": "ContactPoint", "telephone": "+27604857945", "contactType": "customer service", "description": "WhatsApp"}
+        {
+          "@type": "ContactPoint",
+          "telephone": "+27137900283",
+          "contactType": "reservations",
+          "areaServed": "ZA",
+          "availableLanguage": [
+            "English",
+            "Afrikaans"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+27604857945",
+          "contactType": "customer service",
+          "description": "WhatsApp"
+        }
       ],
-      "sameAs": ["https://www.facebook.com/themalelanegolfclub"]
+      "sameAs": [
+        "https://www.facebook.com/themalelanegolfclub"
+      ]
     },
     {
       "@type": "WebSite",
@@ -77,7 +126,138 @@
       "url": "https://obsidianstudiodesigns.github.io/The-Malelane-Golf-Club/",
       "name": "The Malelane Golf Club",
       "inLanguage": "en-ZA",
-      "publisher": {"@id": "https://obsidianstudiodesigns.github.io/The-Malelane-Golf-Club/#club"}
+      "publisher": {
+        "@id": "https://obsidianstudiodesigns.github.io/The-Malelane-Golf-Club/#club"
+      }
+    },
+    {
+      "@type": "SportsEvent",
+      "name": "Newcomers Golf Day",
+      "startDate": "2026-11-29T08:00:00+02:00",
+      "endDate": "2026-11-29T16:00:00+02:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "The Malelane Golf Club",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "R570",
+          "addressLocality": "Malelane",
+          "addressRegion": "Mpumalanga",
+          "postalCode": "1320",
+          "addressCountry": "ZA"
+        }
+      },
+      "organizer": {
+        "@id": "https://obsidianstudiodesigns.github.io/The-Malelane-Golf-Club/#club"
+      },
+      "description": "The Pro Shop Nelspruit's Newcomers Golf Day at Malelane Golf Club, halfway meal included.",
+      "image": "https://obsidianstudiodesigns.github.io/The-Malelane-Golf-Club/assets/img/og-share.jpg",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Adult, 18 holes",
+          "price": "450",
+          "priceCurrency": "ZAR",
+          "url": "https://obsidianstudiodesigns.github.io/The-Malelane-Golf-Club/#whats-on",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Adult, 9 holes",
+          "price": "400",
+          "priceCurrency": "ZAR",
+          "url": "https://obsidianstudiodesigns.github.io/The-Malelane-Golf-Club/#whats-on",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    },
+    {
+      "@type": "SportsEvent",
+      "name": "Christmas Family Day",
+      "startDate": "2026-12-12T08:30:00+02:00",
+      "endDate": "2026-12-12T16:00:00+02:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "The Malelane Golf Club",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "R570",
+          "addressLocality": "Malelane",
+          "addressRegion": "Mpumalanga",
+          "postalCode": "1320",
+          "addressCountry": "ZA"
+        }
+      },
+      "organizer": {
+        "@id": "https://obsidianstudiodesigns.github.io/The-Malelane-Golf-Club/#club"
+      },
+      "description": "Two-ball full scramble with prizes and a Christmas meal after the round.",
+      "image": "https://obsidianstudiodesigns.github.io/The-Malelane-Golf-Club/assets/img/og-share.jpg",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Golfer, meal included",
+          "price": "350",
+          "priceCurrency": "ZAR",
+          "url": "https://obsidianstudiodesigns.github.io/The-Malelane-Golf-Club/#whats-on",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Extra meal ticket",
+          "price": "150",
+          "priceCurrency": "ZAR",
+          "url": "https://obsidianstudiodesigns.github.io/The-Malelane-Golf-Club/#whats-on",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    },
+    {
+      "@type": "SportsEvent",
+      "name": "43rd Annual Lalapalm",
+      "startDate": "2027-03-23",
+      "endDate": "2027-03-27",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "The Malelane Golf Club",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "R570",
+          "addressLocality": "Malelane",
+          "addressRegion": "Mpumalanga",
+          "postalCode": "1320",
+          "addressCountry": "ZA"
+        }
+      },
+      "organizer": {
+        "@id": "https://obsidianstudiodesigns.github.io/The-Malelane-Golf-Club/#club"
+      },
+      "description": "Malelane Golf Club's annual five-day fourball tournament.",
+      "image": "https://obsidianstudiodesigns.github.io/The-Malelane-Golf-Club/assets/img/og-share.jpg",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Early bird entry, per player",
+          "price": "1800",
+          "priceCurrency": "ZAR",
+          "url": "https://obsidianstudiodesigns.github.io/The-Malelane-Golf-Club/#whats-on",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Standard entry, per player",
+          "price": "2000",
+          "priceCurrency": "ZAR",
+          "url": "https://obsidianstudiodesigns.github.io/The-Malelane-Golf-Club/#whats-on",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
     }
   ]
 }
@@ -95,7 +275,8 @@
     <nav class="nav__links" aria-label="Main">
       <a href="#course">The course</a>
       <a href="#clubhouse">Clubhouse</a>
-      <a href="#camping">Camping</a>
+      <a href="#whats-on">What's on</a>
+      <a href="#rates">Rates</a>
       <a href="#visit">Find us</a>
     </nav>
     <a class="btn btn--gold nav__cta" href="#book">Book a tee time</a>
@@ -109,7 +290,9 @@
   <nav aria-label="Mobile">
     <a href="#course">The course</a>
     <a href="#clubhouse">Clubhouse</a>
-    <a href="#camping">Camping</a>
+    <a href="#whats-on">What's on</a>
+    <a href="#results">Results</a>
+    <a href="#rates">Rates</a>
     <a href="#visit">Find us</a>
     <a href="#book">Book a tee time</a>
   </nav>
@@ -189,7 +372,7 @@
         <img src="assets/img/clubhouse-1280.webp" srcset="assets/img/clubhouse-640.webp 640w, assets/img/clubhouse-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 60vw" width="1280" height="960" alt="The clubhouse stoep at dusk looking out over the course" loading="lazy">
         <div class="tile__body">
           <h3>Clubhouse and kitchen</h3>
-          <p>Breakfast before you tee off, a meal at the halfway, and a cold drink on the stoep as the sun goes down.</p>
+          <p>Breakfast before you tee off, a meal at the halfway, and a cold drink on the stoep as the sun goes down. Platters are available to order for functions and golf days.</p>
         </div>
       </article>
       <article class="tile tile--pool">
@@ -203,47 +386,265 @@
         <img src="assets/img/camping-1280.webp" srcset="assets/img/camping-640.webp 640w, assets/img/camping-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 60vw" width="1280" height="960" alt="A 4x4 with a rooftop tent and a caravan parked under big trees around a braai fire" loading="lazy">
         <div class="tile__body">
           <h3>Camping under the trees</h3>
-          <p>Pitch a tent or park the caravan on the lawn beside the course, a few minutes from the Kruger gate. Sites from R400 a night.</p>
-          <a class="link" href="#book">Ask about a site</a>
+          <p>Pitch a tent or park the caravan on the lawn beside the course, a few minutes from the Kruger gate. Stay a night, a week or the whole winter.</p>
+          <a class="link" href="#rates">See camping rates</a>
         </div>
       </article>
       <article class="tile tile--carts">
         <img src="assets/img/tee-cart-640.webp" srcset="assets/img/tee-cart-480.webp 480w, assets/img/tee-cart-640.webp 640w" sizes="(max-width: 760px) 100vw, 34vw" width="640" height="720" alt="Two golfers with their cart on a raised tee, with the Malelane mountains behind" loading="lazy">
         <div class="tile__body">
           <h3>Cart hire</h3>
-          <p>Carts are available for nine or eighteen holes. Ask for one when you book.</p>
+          <p>Fifteen carts for nine or eighteen holes. On Thursdays, two players and a cart cost R600.</p>
         </div>
       </article>
     </div>
   </section>
 
-  <section class="events" id="events" aria-labelledby="events-title">
+  <section class="whatson" id="whats-on" aria-labelledby="whatson-title">
     <div class="wrap">
-      <div class="event" data-until="2026-11-29T23:59:59+02:00">
-        <div class="event__date" aria-hidden="true">
-          <span class="event__day">29</span>
-          <span class="event__month">November</span>
-        </div>
-        <div class="event__body">
-          <h2 id="events-title" class="h2">Newcomers Golf Day</h2>
-          <p>The Pro Shop Nelspruit brings its Newcomers Golf Day to Malelane on Sunday 29 November 2026. Tee off from 08:00, with the halfway meal included in the fee. Campsites are available at the club for anyone making a weekend of it.</p>
-          <table class="fees">
-            <caption class="sr">Newcomers Golf Day fees, including the halfway meal</caption>
-            <thead><tr><th scope="col"><span class="sr">Fee</span></th><th scope="col">18 holes</th><th scope="col">9 holes</th></tr></thead>
+      <h2 id="whatson-title" class="h2 whatson__title">What's on</h2>
+
+      <ul class="week" aria-label="Weekly competitions and specials">
+        <li class="week__day">
+          <h3>Wednesday</h3>
+          <p class="week__what">IPS competition</p>
+          <p>Draw at 09:30, tee off from 10:00.</p>
+        </li>
+        <li class="week__day week__day--special">
+          <h3>Thursday</h3>
+          <p class="week__what">R600 for two players and a cart</p>
+          <p>Bring a partner and share a cart. Book on <a class="nowrap" href="tel:+27137900283">013 790 0283</a>.</p>
+        </li>
+        <li class="week__day">
+          <h3>Friday</h3>
+          <p class="week__what">Chicken Run</p>
+          <p>18 holes on the par 3 course, individual Stableford. Tee off from 13:30.</p>
+        </li>
+        <li class="week__day">
+          <h3>Saturday</h3>
+          <p class="week__what">Club competition</p>
+          <p>Betterball Stableford, and the Monthly Mug once a month. The week's format is on Facebook.</p>
+        </li>
+      </ul>
+
+      <div class="events">
+        <article class="event" data-until="2026-11-29T23:59:59+02:00">
+          <div class="event__date" aria-hidden="true"><span class="event__day">29</span><span class="event__month">Nov</span></div>
+          <div class="event__body">
+            <h3 class="event__title">Newcomers Golf Day</h3>
+            <p class="event__when">Sunday 29 November 2026, tee off from 08:00</p>
+            <p>The Pro Shop Nelspruit brings its Newcomers Golf Day to Malelane, with the halfway meal included in the fee.</p>
+            <table class="fees">
+              <caption class="sr">Newcomers Golf Day fees, including the halfway meal</caption>
+              <thead><tr><th scope="col"><span class="sr">Fee</span></th><th scope="col">18 holes</th><th scope="col">9 holes</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Adults</th><td>R450</td><td>R400</td></tr>
+                <tr><th scope="row">Juniors</th><td>R310</td><td>R260</td></tr>
+                <tr><th scope="row">Cart hire</th><td>R400</td><td>R250</td></tr>
+              </tbody>
+            </table>
+            <a class="btn btn--line" href="tel:+27137571263"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-phone"/></svg>Book with Neels, 013 757 1263</a>
+          </div>
+        </article>
+
+        <article class="event" data-until="2026-12-12T23:59:59+02:00">
+          <div class="event__date" aria-hidden="true"><span class="event__day">12</span><span class="event__month">Dec</span></div>
+          <div class="event__body">
+            <h3 class="event__title">Christmas Family Day</h3>
+            <p class="event__when">Saturday 12 December 2026, tee off between 08:30 and 10:00</p>
+            <p>A two-ball full scramble with prizes, a Christmas meal after the round and a surprise for the children. Festive outfits encouraged. Drop off a gift for your little ones, marked with their name, before 10 December. The draw is out on 10 December.</p>
+            <dl class="event__fees">
+              <div><dt>Golfers, meal included</dt><dd>R350</dd></div>
+              <div><dt>Extra meal tickets</dt><dd>R150</dd></div>
+            </dl>
+            <a class="btn btn--line" href="#book">Book a tee time</a>
+          </div>
+        </article>
+
+        <article class="event" data-until="2027-03-27T23:59:59+02:00">
+          <div class="event__date" aria-hidden="true"><span class="event__day">23</span><span class="event__month">Mar</span></div>
+          <div class="event__body">
+            <h3 class="event__title">The 43rd Lalapalm</h3>
+            <p class="event__when">23 to 27 March 2027</p>
+            <p>The club's annual fourball tournament: five days of golf, team rivalry and evenings at the clubhouse. Get your fourball together early, and book a campsite while there are still stands available.</p>
+            <dl class="event__fees">
+              <div><dt>Early bird, until the end of January 2027</dt><dd>R1&nbsp;800</dd></div>
+              <div><dt>Standard entry</dt><dd>R2&nbsp;000</dd></div>
+            </dl>
+            <a class="btn btn--line" href="https://wa.me/27604857945?text=Hi%20Malelane%20Golf%20Club%2C%20I%27d%20like%20to%20enter%20a%20fourball%20for%20the%202027%20Lalapalm." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-whatsapp-logo"/></svg>Enter on WhatsApp</a>
+          </div>
+        </article>
+
+        <article class="event event--later" hidden>
+          <div class="event__body">
+            <h3 class="event__title">Golf days and club competitions</h3>
+            <p>New golf days, club competitions and course news are posted first on the club's Facebook page.</p>
+            <a class="btn btn--line" href="https://www.facebook.com/themalelanegolfclub" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-facebook-logo"/></svg>Follow on Facebook</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="results" id="results" aria-labelledby="results-title">
+    <div class="wrap">
+      <h2 id="results-title" class="h2 results__title">Latest results</h2>
+      <div class="results__grid">
+        <article class="card card--mug">
+          <header class="card__head">
+            <h3>November Monthly Mug</h3>
+            <p>Saturday 7 November 2026</p>
+          </header>
+          <div class="card__cols">
+            <div>
+              <h4>Gross</h4>
+              <ol class="board">
+                <li><span>Nico Matthee</span><span>77</span></li>
+                <li><span>JP Ellis</span><span>80</span></li>
+                <li><span>Neville Meyer</span><span>80</span></li>
+              </ol>
+            </div>
+            <div>
+              <h4>Nett</h4>
+              <ol class="board">
+                <li><span>Bob Thornley</span><span>69</span></li>
+                <li><span>André Janse van Rensburg</span><span>70</span></li>
+                <li><span>Sizwe Sithole</span><span>70</span></li>
+                <li><span>Theresa Fawcett</span><span>71</span></li>
+              </ol>
+            </div>
+          </div>
+          <dl class="card__extra">
+            <div><dt>Ladies nett</dt><dd>Bev Gillespie, 69</dd></div>
+            <div><dt>Nearest the pin</dt><dd>Hole 2 Nico Matthee, hole 8 Sizwe Sithole, hole 9 JP Ellis</dd></div>
+            <div><dt>Captain vs President</dt><dd>The Captain's team took the cup</dd></div>
+          </dl>
+        </article>
+
+        <article class="card card--ips">
+          <header class="card__head">
+            <h3>Wednesday IPS</h3>
+            <p>November 2026</p>
+          </header>
+          <ol class="board board--points">
+            <li><span>JP Ellis</span><span>37 pts</span></li>
+            <li><span>Georg Muller</span><span>36 pts</span></li>
+            <li><span>Roelf Fritz</span><span>36 pts</span></li>
+          </ol>
+          <dl class="card__extra">
+            <div><dt>Closest to the pin</dt><dd>Holes 2, 8 and 9, all JP Ellis</dd></div>
+          </dl>
+          <a class="link" href="https://www.facebook.com/themalelanegolfclub" target="_blank" rel="noopener">More results on Facebook</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="rates wrap" id="rates" aria-labelledby="rates-title">
+    <h2 id="rates-title" class="h2">2027 rates</h2>
+    <p class="rates__intro">Green fees, carts, camping and membership for 2027. Affiliated visitors are members of another affiliated golf club.</p>
+
+    <div class="tabs" data-tabs>
+      <div class="tabs__list" role="tablist" aria-label="Rate tables">
+        <button type="button" role="tab" id="tab-visitors" aria-controls="panel-visitors" aria-selected="true">Visitors</button>
+        <button type="button" role="tab" id="tab-members" aria-controls="panel-members" aria-selected="false" tabindex="-1">Members</button>
+        <button type="button" role="tab" id="tab-camping" aria-controls="panel-camping" aria-selected="false" tabindex="-1">Camping</button>
+        <button type="button" role="tab" id="tab-membership" aria-controls="panel-membership" aria-selected="false" tabindex="-1">Membership</button>
+      </div>
+
+      <div class="tabs__panel" role="tabpanel" id="panel-visitors" aria-labelledby="tab-visitors" tabindex="0">
+        <div class="ratecols">
+          <table class="rate">
+            <caption>Affiliated visitors</caption>
+            <thead><tr><th scope="col"><span class="sr">Player</span></th><th scope="col">9 holes</th><th scope="col">18 holes</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Adults</th><td>R450</td><td>R400</td></tr>
-              <tr><th scope="row">Juniors</th><td>R310</td><td>R260</td></tr>
-              <tr><th scope="row">Cart hire</th><td>R400</td><td>R250</td></tr>
+              <tr><th scope="row">Adult</th><td>R300</td><td>R435</td></tr>
+              <tr><th scope="row">Senior</th><td>R230</td><td>R320</td></tr>
+              <tr><th scope="row">Junior</th><td>R120</td><td>R170</td></tr>
             </tbody>
           </table>
-          <a class="btn btn--line" href="tel:+27137571263"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-phone"/></svg>Book with Neels, 013 757 1263</a>
+          <table class="rate">
+            <caption>Non-affiliated visitors</caption>
+            <thead><tr><th scope="col"><span class="sr">Player</span></th><th scope="col">9 holes</th><th scope="col">18 holes</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Adult</th><td>R400</td><td>R625</td></tr>
+              <tr><th scope="row">Senior</th><td>R290</td><td>R510</td></tr>
+              <tr><th scope="row">Junior</th><td>R175</td><td>R260</td></tr>
+            </tbody>
+          </table>
+          <table class="rate">
+            <caption>Groups, per player</caption>
+            <thead><tr><th scope="col"><span class="sr">Group size</span></th><th scope="col">9 holes</th><th scope="col">18 holes</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">9 to 20 players</th><td>R290</td><td>R360</td></tr>
+              <tr><th scope="row">21 or more</th><td>R230</td><td>R320</td></tr>
+            </tbody>
+          </table>
+          <table class="rate">
+            <caption>Cart hire</caption>
+            <thead><tr><th scope="col"><span class="sr">Cart</span></th><th scope="col">9 holes</th><th scope="col">18 holes</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Per cart</th><td>R265</td><td>R425</td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      <div class="event event--later" hidden>
-        <div class="event__body">
-          <h2 class="h2">Golf days and club competitions</h2>
-          <p>Golf days, club competitions and course news are posted first on the club's Facebook page.</p>
-          <a class="btn btn--line" href="https://www.facebook.com/themalelanegolfclub" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-facebook-logo"/></svg>Follow on Facebook</a>
+
+      <div class="tabs__panel" role="tabpanel" id="panel-members" aria-labelledby="tab-members" tabindex="0" hidden>
+        <div class="ratecols">
+          <table class="rate">
+            <caption>Member green fees</caption>
+            <thead><tr><th scope="col"><span class="sr">Member</span></th><th scope="col">9 holes</th><th scope="col">18 holes</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Member</th><td>R170</td><td>R220</td></tr>
+              <tr><th scope="row">Senior</th><td>R160</td><td>R200</td></tr>
+              <tr><th scope="row">Junior</th><td>R100</td><td>R110</td></tr>
+              <tr><th scope="row">SAGDB</th><td>R100</td><td>R110</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="tabs__panel" role="tabpanel" id="panel-camping" aria-labelledby="tab-camping" tabindex="0" hidden>
+        <div class="ratecols">
+          <table class="rate">
+            <caption>Campsites, per stand</caption>
+            <thead><tr><th scope="col"><span class="sr">Period</span></th><th scope="col">Standard</th><th scope="col">Pensioners</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Per day</th><td>R500</td><td>R420</td></tr>
+              <tr><th scope="row">Per week</th><td>R2&nbsp;840</td><td>R2&nbsp;200</td></tr>
+              <tr><th scope="row">Per month</th><td>R8&nbsp;500</td><td>R7&nbsp;300</td></tr>
+            </tbody>
+          </table>
+          <p class="rate__note">R100 extra per additional person. A maximum of one caravan and six people per stand.</p>
+        </div>
+      </div>
+
+      <div class="tabs__panel" role="tabpanel" id="panel-membership" aria-labelledby="tab-membership" tabindex="0" hidden>
+        <div class="ratecols ratecols--two">
+          <table class="rate">
+            <caption>Annual membership</caption>
+            <thead><tr><th scope="col">Category</th><th scope="col">Per year</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">First member</th><td>R5&nbsp;020</td></tr>
+              <tr><th scope="row">Couple</th><td>R7&nbsp;500</td></tr>
+              <tr><th scope="row">Family (up to 4)</th><td>R11&nbsp;320</td></tr>
+              <tr><th scope="row">Pensioner over 65</th><td>R3&nbsp;940</td></tr>
+              <tr><th scope="row">Student with a valid card</th><td>R3&nbsp;500</td></tr>
+              <tr><th scope="row">Junior</th><td>R1&nbsp;980</td></tr>
+            </tbody>
+          </table>
+          <table class="rate">
+            <caption>Country and corporate</caption>
+            <thead><tr><th scope="col">Category</th><th scope="col">Per year</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Country member</th><td>R2&nbsp;335</td></tr>
+              <tr><th scope="row">Country member, junior</th><td>R1&nbsp;200</td></tr>
+              <tr><th scope="row">Living more than 50 km away</th><td>R3&nbsp;940</td></tr>
+              <tr><th scope="row">Satellite, more than 200 km away</th><td>R1&nbsp;950</td></tr>
+              <tr><th scope="row">Corporate, 4 players</th><td>R14&nbsp;000</td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -271,7 +672,8 @@
     <div class="book__grid wrap">
       <div class="book__intro">
         <h2 id="book-title" class="h2">Book a tee time</h2>
-        <p>Send your details on WhatsApp and the office will confirm your tee time and the current green fees. Visitors, societies and campers are all welcome.</p>
+        <p>Send your details on WhatsApp and the office will confirm your tee time. Visitors, societies and campers are all welcome.</p>
+        <p>Planning a corporate or charity golf day? Ask the office for the corporate golf day pack, with packages, catering and sponsorship options.</p>
         <p class="book__alt">Prefer to call? <a href="tel:+27137900283">013 790 0283</a></p>
       </div>
       <form class="form" id="book-form" novalidate>
@@ -326,7 +728,9 @@
         <ul>
           <li><a href="#course">The course</a></li>
           <li><a href="#clubhouse">Clubhouse</a></li>
-          <li><a href="#camping">Camping</a></li>
+          <li><a href="#whats-on">What's on</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#rates">Rates</a></li>
           <li><a href="#visit">Find us</a></li>
         </ul>
       </nav>
@@ -351,6 +755,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=2" defer></script>
+<script src="assets/js/main.js?v=3" defer></script>
 </body>
 </html>

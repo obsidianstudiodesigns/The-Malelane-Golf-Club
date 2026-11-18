@@ -37,18 +37,42 @@
     window.matchMedia('(min-width: 961px)').addEventListener('change', function (m) { if (m.matches) setOpen(false); });
   }
 
-  // Event block: show the next golf day until it has passed, then the general note
-  document.querySelectorAll('.event[data-until]').forEach(function (ev) {
-    var until = new Date(ev.getAttribute('data-until'));
-    if (!isNaN(until) && Date.now() > until.getTime()) {
-      ev.hidden = true;
-      var later = ev.parentElement.querySelector('.event--later');
-      if (later) {
-        later.hidden = false;
-        var h = later.querySelector('h2');
-        if (h) h.id = 'events-title';
-      }
-    }
+  // Events: each one hides itself once its date has passed; if none are left, show the Facebook note
+  document.querySelectorAll('.events').forEach(function (list) {
+    var shown = [];
+    list.querySelectorAll('.event[data-until]').forEach(function (ev) {
+      var until = new Date(ev.getAttribute('data-until'));
+      if (!isNaN(until) && Date.now() > until.getTime()) ev.hidden = true;
+      else shown.push(ev);
+    });
+    var later = list.querySelector('.event--later');
+    if (!shown.length && later) { later.hidden = false; shown.push(later); }
+    if (shown.length) shown[0].classList.add('is-first');
+  });
+
+  // Rate tabs (WAI-ARIA tabs pattern with arrow-key support)
+  document.querySelectorAll('[data-tabs]').forEach(function (box) {
+    var tabs = Array.prototype.slice.call(box.querySelectorAll('[role="tab"]'));
+    var select = function (tab, focus) {
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+      if (focus) tab.focus();
+    };
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener('click', function () { select(tab, false); });
+      tab.addEventListener('keydown', function (e) {
+        var n = null;
+        if (e.key === 'ArrowRight') n = tabs[(i + 1) % tabs.length];
+        else if (e.key === 'ArrowLeft') n = tabs[(i - 1 + tabs.length) % tabs.length];
+        else if (e.key === 'Home') n = tabs[0];
+        else if (e.key === 'End') n = tabs[tabs.length - 1];
+        if (n) { e.preventDefault(); select(n, true); }
+      });
+    });
   });
 
   // Year in footer
